@@ -50,7 +50,7 @@ public class PaymentController {
         Payment insert = this.paymentService.insert(payment);
         System.out.println(insert);
         System.out.println("1234567890");
-        return new CommonResult(200,"insert success" ,insert);
+        return new CommonResult<Payment>(200,"insert success" ,insert);
     }
 
     @GetMapping("discovery")
