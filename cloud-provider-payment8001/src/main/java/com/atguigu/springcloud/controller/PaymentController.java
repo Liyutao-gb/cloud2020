@@ -29,8 +29,8 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
-    @Resource
-    private DiscoveryClient discoveryClient;
+//    @Resource
+//    private DiscoveryClient discoveryClient;
 
     /**
      * 通过主键查询单条数据
@@ -53,7 +53,7 @@ public class PaymentController {
         return new CommonResult<Payment>(200,"insert success" ,insert);
     }
 
-    @GetMapping("discovery")
+    /*@GetMapping("discovery")
     public Object discovery() {
         List<String> services = discoveryClient.getServices();
         services.forEach(service->{
@@ -65,7 +65,7 @@ public class PaymentController {
         }
 
         return this.discoveryClient;
-    }
+    }*/
 
     @GetMapping("lb")
     public String getPaymentLB() {
